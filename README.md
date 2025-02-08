@@ -1,16 +1,23 @@
 # Knitting LLMs: Generating Knitting Patterns from Language Models
 
-This project explores the fascinating intersection of artificial intelligence and traditional crafts by generating knitting patterns from the internal representations of various language models. By analyzing the attention patterns, token probabilities, and hidden states of different language models, we create unique, model-specific knitting patterns that represent how these AI models process and understand text.
-
-## Overview
+This project explores the intersection of artificial intelligence and traditional crafts by generating knitting patterns from the internal representations of various language models. By analyzing the attention patterns, token probabilities, and hidden states of different language models, we create unique, model-specific knitting patterns that represent how these AI models process and understand text.
 
 The project takes a language model and a text prompt as input, and generates:
+
 1. A visualization of the model's internal representations
 2. A corresponding knitting pattern with three colors
 3. Detailed knitting instructions in markdown format
 
 ![Example Pattern from GPT-2 XL](outputs/pattern_gpt2_xl_Nothing_will_come_of.png)
 *Example pattern generated from GPT-2 XL with the prompt "Nothing will come of nothing"*
+
+I generated patterns for three of my favourite quotes from Shakespeare's King
+Lear which, when I chose them, also seemed appropriate for the exercise as a
+whole:
+
+- "Nothing will come of nothing"
+- "As flies to wanton boys are we to th' gods: / They kill us for our sport."
+- "Men must endure / Their going hence, even as their coming hither."
 
 ## Features
 
