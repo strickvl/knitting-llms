@@ -296,12 +296,14 @@ class LMPatternGenerator:
         # Add color information with names
         for i, color in enumerate(self.config.color_scheme):
             color_name = self.get_color_name(color)
-            md_content.append(f"- Color {i+1}: {color_name} ({color})")
+            md_content.append(f"- Color {i + 1}: {color_name} ({color})")
 
         md_content.extend(
             [
                 f"\n## Pattern Notes",
-                "- Each row is read from left to right",
+                "- Pattern is worked flat (back and forth)",
+                "- Odd-numbered rows (right side): Work from right to left",
+                "- Even-numbered rows (wrong side): Work from left to right",
                 "- The pattern is worked in stockinette stitch unless otherwise specified",
                 "- Carry unused colors loosely along the back of work",
                 "- Check gauge and adjust needle size accordingly",
@@ -312,12 +314,15 @@ class LMPatternGenerator:
 
         # Add row-by-row instructions with more detail
         for i in range(len(pattern)):
-            md_content.append(f"\n### Row {i+1}")
+            md_content.append(f"\n### Row {i + 1}")
             current_color = None
             count = 0
             instructions = []
 
-            for value in pattern[i]:
+            # For even-numbered rows (wrong side), reverse the order
+            row = pattern[i][::-1] if (i + 1) % 2 == 0 else pattern[i]
+
+            for value in row:
                 color_num = int(value) + 1
                 if color_num != current_color:
                     if current_color is not None:
@@ -341,7 +346,10 @@ class LMPatternGenerator:
                     f"Color {current_color} ({color_name}) for {count} stitches"
                 )
 
-            md_content.append("Work as follows: " + " | ".join(instructions))
+            direction = "left to right" if (i + 1) % 2 == 0 else "right to left"
+            md_content.append(
+                f"Work {direction} as follows: " + " | ".join(instructions)
+            )
 
         # Add tips and image reference
         md_content.extend(
@@ -352,6 +360,7 @@ class LMPatternGenerator:
                 "- Block your finished piece to even out the stitches",
                 "- Take a picture of each row as you complete it to track your progress",
                 "- Consider using bobbins for each color to prevent tangling",
+                "- Remember that even-numbered rows are worked from left to right (wrong side)",
                 f"\n## Pattern Visualization",
                 f"![Pattern Visualization]({os.path.basename(save_path)})"
                 if save_path
@@ -376,8 +385,15 @@ class LMPatternGenerator:
         """Visualize the generated pattern and create markdown instructions."""
         knit_pattern, prob_dist = self.generate_pattern()
 
+        # Create a version of the pattern that shows how it will actually appear when knitted
+        knitted_appearance = knit_pattern.copy()
+        # Reverse every even-numbered row to show how it will look when knitted
+        for i in range(len(knitted_appearance)):
+            if (i + 1) % 2 == 0:  # even-numbered rows
+                knitted_appearance[i] = knitted_appearance[i, ::-1]
+
         # Increase figure size for larger patterns
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 8))
+        fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(30, 8))
 
         # Plot probability distribution with a custom colormap based on model's color scheme
         base_color = self.config.color_scheme[-1]  # Use darkest color
@@ -385,10 +401,40 @@ class LMPatternGenerator:
         sns.heatmap(prob_dist, ax=ax1, cmap=prob_cmap)
         ax1.set_title("Token Probability Distribution")
 
-        # Plot knitting pattern
+        # Plot original pattern (as generated)
         knit_cmap = plt.cm.colors.ListedColormap(self.config.color_scheme)
-        sns.heatmap(knit_pattern, ax=ax2, cmap=knit_cmap, cbar=True)
-        ax2.set_title("Knitting Pattern")
+        sns.heatmap(
+            knit_pattern,
+            ax=ax2,
+            cmap=knit_cmap,
+            cbar=True,
+            linewidths=0.5,
+            linecolor="black",
+        )  # Add grid
+        ax2.set_title("Pattern as Generated\n(All rows right to left)")
+        # Add row numbers on the left
+        ax2.set_yticks(np.arange(len(knit_pattern)) + 0.5)
+        ax2.set_yticklabels(range(1, len(knit_pattern) + 1))
+        # Add stitch numbers on top
+        ax2.set_xticks(np.arange(len(knit_pattern[0])) + 0.5)
+        ax2.set_xticklabels(range(1, len(knit_pattern[0]) + 1))
+
+        # Plot knitted appearance (with alternating row directions)
+        sns.heatmap(
+            knitted_appearance,
+            ax=ax3,
+            cmap=knit_cmap,
+            cbar=True,
+            linewidths=0.5,
+            linecolor="black",
+        )  # Add grid
+        ax3.set_title("Pattern as Knitted\n(Alternating row directions)")
+        # Add row numbers on the left
+        ax3.set_yticks(np.arange(len(knitted_appearance)) + 0.5)
+        ax3.set_yticklabels(range(1, len(knitted_appearance) + 1))
+        # Add stitch numbers on top
+        ax3.set_xticks(np.arange(len(knitted_appearance[0])) + 0.5)
+        ax3.set_xticklabels(range(1, len(knitted_appearance[0]) + 1))
 
         plt.suptitle(
             f'Pattern Generation for {self.model_name}\nPrompt: "{self.prompt}"'
@@ -415,11 +461,11 @@ class LMPatternGenerator:
         print("\nKnitting Instructions:")
         print("\nColor Scheme:")
         for i, color in enumerate(self.config.color_scheme):
-            print(f"Color {i+1}: {color}")
+            print(f"Color {i + 1}: {color}")
 
         print("\nPattern (20x20):")
         for i in range(len(pattern)):
-            print(f"\nRow {i+1}:")
+            print(f"\nRow {i + 1}:")
             current_color = None
             count = 0
             instructions = []

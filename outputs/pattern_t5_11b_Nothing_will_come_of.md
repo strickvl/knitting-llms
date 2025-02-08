@@ -24,7 +24,9 @@
 - Color 3: Dark Purple (#7B1FA2)
 
 ## Pattern Notes
-- Each row is read from left to right
+- Pattern is worked flat (back and forth)
+- Odd-numbered rows (right side): Work from right to left
+- Even-numbered rows (wrong side): Work from left to right
 - The pattern is worked in stockinette stitch unless otherwise specified
 - Carry unused colors loosely along the back of work
 - Check gauge and adjust needle size accordingly
@@ -33,64 +35,64 @@
 ## Row-by-Row Instructions
 
 ### Row 1
-Work as follows: Color 3 (Dark Purple) for 12 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 2 stitches | Color 3 (Dark Purple) for 2 stitches
+Work right to left as follows: Color 3 (Dark Purple) for 12 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 2 stitches | Color 3 (Dark Purple) for 2 stitches
 
 ### Row 2
-Work as follows: Color 3 (Dark Purple) for 12 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 2 stitches | Color 3 (Dark Purple) for 2 stitches
+Work left to right as follows: Color 3 (Dark Purple) for 2 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 2 stitches | Color 3 (Dark Purple) for 12 stitches
 
 ### Row 3
-Work as follows: Color 3 (Dark Purple) for 10 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 1 stitches | Color 1 (Light Purple) for 3 stitches | Color 2 (Medium Purple) for 5 stitches
+Work right to left as follows: Color 3 (Dark Purple) for 10 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 1 stitches | Color 1 (Light Purple) for 3 stitches | Color 2 (Medium Purple) for 5 stitches
 
 ### Row 4
-Work as follows: Color 2 (Medium Purple) for 10 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 6 stitches | Color 2 (Medium Purple) for 2 stitches
+Work left to right as follows: Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 6 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 10 stitches
 
 ### Row 5
-Work as follows: Color 1 (Light Purple) for 11 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 8 stitches
+Work right to left as follows: Color 1 (Light Purple) for 11 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 8 stitches
 
 ### Row 6
-Work as follows: Color 2 (Medium Purple) for 12 stitches | Color 1 (Light Purple) for 6 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches
+Work left to right as follows: Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 6 stitches | Color 2 (Medium Purple) for 12 stitches
 
 ### Row 7
-Work as follows: Color 2 (Medium Purple) for 12 stitches | Color 1 (Light Purple) for 6 stitches | Color 2 (Medium Purple) for 2 stitches
+Work right to left as follows: Color 2 (Medium Purple) for 12 stitches | Color 1 (Light Purple) for 6 stitches | Color 2 (Medium Purple) for 2 stitches
 
 ### Row 8
-Work as follows: Color 3 (Dark Purple) for 10 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 1 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 3 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches
+Work left to right as follows: Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 3 stitches | Color 2 (Medium Purple) for 2 stitches | Color 3 (Dark Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 10 stitches
 
 ### Row 9
-Work as follows: Color 3 (Dark Purple) for 12 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches
+Work right to left as follows: Color 3 (Dark Purple) for 12 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches
 
 ### Row 10
-Work as follows: Color 3 (Dark Purple) for 13 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 2 stitches
+Work left to right as follows: Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 13 stitches
 
 ### Row 11
-Work as follows: Color 3 (Dark Purple) for 10 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 1 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 3 stitches | Color 2 (Medium Purple) for 3 stitches
+Work right to left as follows: Color 3 (Dark Purple) for 10 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 1 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 3 stitches | Color 2 (Medium Purple) for 3 stitches
 
 ### Row 12
-Work as follows: Color 3 (Dark Purple) for 8 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 4 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 3 stitches
+Work left to right as follows: Color 2 (Medium Purple) for 3 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 2 stitches | Color 3 (Dark Purple) for 4 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 8 stitches
 
 ### Row 13
-Work as follows: Color 2 (Medium Purple) for 14 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 3 stitches | Color 3 (Dark Purple) for 2 stitches
+Work right to left as follows: Color 2 (Medium Purple) for 14 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 3 stitches | Color 3 (Dark Purple) for 2 stitches
 
 ### Row 14
-Work as follows: Color 2 (Medium Purple) for 10 stitches | Color 1 (Light Purple) for 1 stitches | Color 3 (Dark Purple) for 1 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 2 stitches | Color 3 (Dark Purple) for 3 stitches
+Work left to right as follows: Color 3 (Dark Purple) for 3 stitches | Color 2 (Medium Purple) for 2 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 2 stitches | Color 3 (Dark Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 10 stitches
 
 ### Row 15
-Work as follows: Color 2 (Medium Purple) for 5 stitches | Color 1 (Light Purple) for 6 stitches | Color 2 (Medium Purple) for 3 stitches | Color 3 (Dark Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 4 stitches
+Work right to left as follows: Color 2 (Medium Purple) for 5 stitches | Color 1 (Light Purple) for 6 stitches | Color 2 (Medium Purple) for 3 stitches | Color 3 (Dark Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 4 stitches
 
 ### Row 16
-Work as follows: Color 1 (Light Purple) for 11 stitches | Color 3 (Dark Purple) for 1 stitches | Color 1 (Light Purple) for 2 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 5 stitches
+Work left to right as follows: Color 3 (Dark Purple) for 5 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 2 stitches | Color 3 (Dark Purple) for 1 stitches | Color 1 (Light Purple) for 11 stitches
 
 ### Row 17
-Work as follows: Color 1 (Light Purple) for 12 stitches | Color 2 (Medium Purple) for 3 stitches | Color 3 (Dark Purple) for 5 stitches
+Work right to left as follows: Color 1 (Light Purple) for 12 stitches | Color 2 (Medium Purple) for 3 stitches | Color 3 (Dark Purple) for 5 stitches
 
 ### Row 18
-Work as follows: Color 1 (Light Purple) for 11 stitches | Color 2 (Medium Purple) for 4 stitches | Color 3 (Dark Purple) for 5 stitches
+Work left to right as follows: Color 3 (Dark Purple) for 5 stitches | Color 2 (Medium Purple) for 4 stitches | Color 1 (Light Purple) for 11 stitches
 
 ### Row 19
-Work as follows: Color 1 (Light Purple) for 12 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 5 stitches
+Work right to left as follows: Color 1 (Light Purple) for 12 stitches | Color 2 (Medium Purple) for 1 stitches | Color 1 (Light Purple) for 1 stitches | Color 2 (Medium Purple) for 1 stitches | Color 3 (Dark Purple) for 5 stitches
 
 ### Row 20
-Work as follows: Color 1 (Light Purple) for 12 stitches | Color 2 (Medium Purple) for 3 stitches | Color 3 (Dark Purple) for 5 stitches
+Work left to right as follows: Color 3 (Dark Purple) for 5 stitches | Color 2 (Medium Purple) for 3 stitches | Color 1 (Light Purple) for 12 stitches
 
 ## Tips
 - Use stitch markers between color changes to help track your progress
@@ -98,6 +100,7 @@ Work as follows: Color 1 (Light Purple) for 12 stitches | Color 2 (Medium Purple
 - Block your finished piece to even out the stitches
 - Take a picture of each row as you complete it to track your progress
 - Consider using bobbins for each color to prevent tangling
+- Remember that even-numbered rows are worked from left to right (wrong side)
 
 ## Pattern Visualization
 ![Pattern Visualization](pattern_t5_11b_Nothing_will_come_of.png)
