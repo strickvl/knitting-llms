@@ -7,13 +7,13 @@ import os
 
 
 class ModelSwatchGenerator:
-    def __init__(self, grid_size=10, percentile_thresholds=(33, 66)):
+    def __init__(self, grid_size=10, percentile_thresholds=(25, 50, 75)):
         """
         Initialize the swatch pattern generator.
 
         Args:
             grid_size (int): Size of the grid (grid_size x grid_size)
-            percentile_thresholds (tuple): Two percentile values for creating three color bands
+            percentile_thresholds (tuple): Three percentile values for creating four color bands
         """
         self.grid_size = grid_size
         self.percentile_thresholds = percentile_thresholds
@@ -54,7 +54,7 @@ class ModelSwatchGenerator:
 
         Returns:
             tuple: (color_grid, grid_counts, pca)
-                - color_grid: 2D array with values 0, 1, 2 for light, medium, dark
+                - color_grid: 2D array with values 0, 1, 2, 3 for lightest to darkest blue
                 - grid_counts: Raw counts of embeddings in each grid cell
                 - pca: Fitted PCA object
         """
@@ -81,13 +81,15 @@ class ModelSwatchGenerator:
                 y_idx -= 1
             grid_counts[y_idx, x_idx] += 1
 
-        # Create color coding
+        # Create color coding with 4 shades
         low_threshold = np.percentile(grid_counts, self.percentile_thresholds[0])
-        high_threshold = np.percentile(grid_counts, self.percentile_thresholds[1])
+        mid_threshold = np.percentile(grid_counts, self.percentile_thresholds[1])
+        high_threshold = np.percentile(grid_counts, self.percentile_thresholds[2])
 
         color_grid = np.zeros_like(grid_counts)
         color_grid[grid_counts > low_threshold] = 1
-        color_grid[grid_counts > high_threshold] = 2
+        color_grid[grid_counts > mid_threshold] = 2
+        color_grid[grid_counts > high_threshold] = 3
 
         return color_grid, grid_counts, pca
 
@@ -96,14 +98,14 @@ class ModelSwatchGenerator:
         Visualize the knitting pattern.
 
         Args:
-            color_grid (numpy.ndarray): Grid of color values (0, 1, 2)
+            color_grid (numpy.ndarray): Grid of color values (0, 1, 2, 3)
             model_name (str): Name of the model (for title)
             save_path (str, optional): Path to save the plot
         """
         plt.figure(figsize=(10, 10))
 
-        # Custom colormap for the three values
-        colors = ["#F8F9FA", "#ADB5BD", "#495057"]
+        # Custom colormap for four shades of blue
+        colors = ["#E3F2FD", "#90CAF9", "#2196F3", "#0D47A1"]
         cmap = plt.cm.colors.ListedColormap(colors)
 
         # Plot the pattern
@@ -117,7 +119,7 @@ class ModelSwatchGenerator:
         )
 
         # Add title and labels
-        plt.title(f"Knitting Pattern for {model_name}\n(Light=0, Medium=1, Dark=2)")
+        plt.title(f"Knitting Pattern for {model_name}\n(Lightest=0 to Darkest=3)")
 
         if save_path:
             # Create outputs directory if it doesn't exist
@@ -132,9 +134,10 @@ class ModelSwatchGenerator:
     def print_pattern_stats(self, color_grid):
         """Print statistics about the pattern."""
         print("\nPattern Statistics:")
-        print(f"Light stitches (0):  {np.sum(color_grid == 0)} cells")
-        print(f"Medium stitches (1): {np.sum(color_grid == 1)} cells")
-        print(f"Dark stitches (2):   {np.sum(color_grid == 2)} cells")
+        print(f"Lightest blue (0):  {np.sum(color_grid == 0)} cells")
+        print(f"Light blue (1):     {np.sum(color_grid == 1)} cells")
+        print(f"Medium blue (2):    {np.sum(color_grid == 2)} cells")
+        print(f"Dark blue (3):      {np.sum(color_grid == 3)} cells")
 
 
 def main():
@@ -142,10 +145,8 @@ def main():
     models = [
         "prajjwal1/bert-tiny",  # Very small BERT model
         "gpt2",  # Small GPT-2 model
-        # Add more models as needed
     ]
 
-    # Initialize generator
     generator = ModelSwatchGenerator(grid_size=10)
 
     # Generate patterns for each model
@@ -167,7 +168,16 @@ def main():
         for i in range(min(3, len(color_grid))):
             row = color_grid[i]
             instruction = " ".join(
-                ["Light" if x == 0 else "Medium" if x == 1 else "Dark" for x in row]
+                [
+                    "Lightest"
+                    if x == 0
+                    else "Light"
+                    if x == 1
+                    else "Medium"
+                    if x == 2
+                    else "Dark"
+                    for x in row
+                ]
             )
             print(f"Row {i+1}: {instruction}")
 
